@@ -29,7 +29,7 @@ var listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-app.get( "/whoami", ( req, res ) => {
+app.get( "/api/whoami", ( req, res ) => {
   const { ipaddress } = req;
   console.log( ipaddress );
 });
