@@ -32,7 +32,8 @@ var listener = app.listen(process.env.PORT || 3000, function() {
 app.get("/api/whoami", (req, res) => {
   const ip = req.ip;
   const lang = req.acceptsLanguages();
+  const software = req.headers['user-agent'];
 
-  console.log(ip, lang);
-  res.json({ ipaddress: ip, language: lang });
+  console.log(ip, lang, software);
+  res.json({ ipaddress: ip, language: lang, software: software });
 });
