@@ -30,6 +30,6 @@ var listener = app.listen(process.env.PORT || 3000, function () {
 });
 
 app.get( "/api/whoami", ( req, res ) => {
-  const { ipaddress } = req;
-  console.log( ipaddress );
+  const ip = req.get( ipaddress );
+  console.log( ip );
 });
